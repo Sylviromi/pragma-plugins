@@ -1,0 +1,10 @@
+{
+  "name": "pragma-plugin-frontend-dev",
+  "version": "0.0.0",
+  "description": "Frontend Developer \u2014 live localhost preview miniscreen with hot-reload and full tool control for frontend work.",
+  "keywords": [
+    "pragma-plugin",
+    "frontend-dev"
+  ],
+  "license": "MIT"
+}
