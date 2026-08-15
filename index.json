@@ -1,8 +1,8 @@
 {
   "$schema": "https://pragma.dev/schemas/plugin-index.json",
-  "generatedAt": "2026-08-15T15:27:53.454Z",
+  "generatedAt": "2026-08-15T15:42:51.863Z",
   "repo": "https://github.com/Sylviromi/pragma-plugins",
-  "pluginCount": 4,
+  "pluginCount": 3,
   "plugins": [
     {
       "id": "convo",
@@ -14,17 +14,6 @@
       "repository": "",
       "homepage": "",
       "source": "git:https://github.com/Sylviromi/pragma-plugins@convo-v1.5.1#convo"
-    },
-    {
-      "id": "demo",
-      "name": "Demo Plugin",
-      "version": "1.0.0",
-      "description": "Reference plugin: status bar, input toolbar button, its own provider",
-      "author": "",
-      "publisher": "",
-      "repository": "",
-      "homepage": "",
-      "source": "git:https://github.com/Sylviromi/pragma-plugins@demo-v1.0.0#demo"
     },
     {
       "id": "frontend-dev",
