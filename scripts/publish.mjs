@@ -20,7 +20,7 @@ const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))
 
 const published = []
 for (const id of readdirSync('.')) {
-  if (!statSync(id).isDirectory() || !id.startsWith('pragma-plugin-')) continue
+  if (!statSync(id).isDirectory() || id.startsWith('.')) continue
   if (only.length && !only.includes(id)) continue
   const dir = id
   const manifestPath = join(dir, 'manifest.json')

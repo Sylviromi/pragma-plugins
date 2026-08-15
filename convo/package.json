@@ -1,7 +1,7 @@
 {
   "name": "pragma-plugin-convo",
-  "version": "0.0.0",
-  "description": "Convo \u2014 the agent texts you like a developer you own: autonomous background work with chat updates, questions and summaries.",
+  "version": "1.5.1",
+  "description": "Convo — the agent texts you like a developer you own: autonomous background work with chat updates, questions and summaries.",
   "keywords": [
     "pragma-plugin",
     "convo"
