@@ -9,3 +9,6 @@ package-lock.json
 .DS_Store
 .vscode/
 .idea/
+
+# Secrets — the npm publish token lives here (never commit)
+.env
