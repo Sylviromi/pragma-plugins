@@ -5,8 +5,9 @@
   "description": "Frontend Developer skill: serves the working directory on a live localhost server with a hot-reloading preview miniscreen (fullscreen, multi-file gallery) and tool control",
   "contributes": {
     "providers": [],
-    "slots": ["miniscreen"],
-    "commands": [],
-    "skills": []
+    "slots": [
+      "miniscreen"
+    ],
+    "commands": []
   }
 }

@@ -9,7 +9,6 @@
       "chat-view",
       "settings-page"
     ],
-    "commands": [],
-    "skills": []
+    "commands": []
   }
 }
