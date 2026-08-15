@@ -1,0 +1,12 @@
+{
+  "id": "demo",
+  "name": "Demo Plugin",
+  "version": "1.0.0",
+  "description": "Reference plugin: status bar, input toolbar button, its own provider",
+  "contributes": {
+    "providers": ["demo"],
+    "slots": ["chat-toolbar-extra", "input-toolbar", "model-picker-extra"],
+    "commands": ["/demo"],
+    "skills": ["skill.md"]
+  }
+}

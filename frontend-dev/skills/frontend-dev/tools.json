@@ -1,0 +1,76 @@
+[
+  {
+    "name": "fe_serve_start",
+    "description": "Start a static file server for the session working directory (or `dir`) on an ephemeral localhost port. Returns the port and serving directory. The user's app shows a live preview (miniscreen) of this directory with hot reload. Use this when the task involves previewing or iterating on frontend code — the handler IS the server.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "description": "Directory to serve (defaults to the session working directory)"
+        }
+      }
+    }
+  },
+  {
+    "name": "fe_serve_status",
+    "description": "List running servers: directory, port, started time, and which file the live preview currently shows (activeFile). Also reports the session working directory.",
+    "inputSchema": { "type": "object", "properties": {} }
+  },
+  {
+    "name": "fe_serve_list",
+    "description": "List the HTML files served by the server for `dir` (defaults to the session working directory): relative name, URL, size and last-modified time, plus activeFile (the file the live preview currently shows). Use this to verify what the user can see in the preview and to enumerate generated artifacts.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "description": "Directory whose server to inspect (defaults to the session working directory)"
+        }
+      }
+    }
+  },
+  {
+    "name": "fe_serve_show",
+    "description": "Point the live preview (miniscreen) at a specific file inside the served directory, e.g. \"index.html\" or \"viz/03.html\". The user's preview navigates to it automatically. Use when you want the user to look at a particular artifact you produced.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "description": "Directory whose server to direct (defaults to the session working directory)"
+        },
+        "file": {
+          "type": "string",
+          "description": "Path of the file to show, relative to the served directory, e.g. \"index.html\" or \"viz/03.html\""
+        }
+      }
+    }
+  },
+  {
+    "name": "fe_serve_stop",
+    "description": "Stop the server serving `dir` (defaults to the session working directory).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "description": "Directory whose server to stop (defaults to the session working directory)"
+        }
+      }
+    }
+  },
+  {
+    "name": "fe_serve_logs",
+    "description": "Return the last `limit` log lines of the static server (requests served, errors).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "integer",
+          "description": "Number of recent log lines, default 50, max 200."
+        }
+      }
+    }
+  }
+]

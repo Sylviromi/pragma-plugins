@@ -1,0 +1,15 @@
+{
+  "id": "convo",
+  "name": "Convo",
+  "version": "1.5.1",
+  "description": "Turns the chat into a one-to-one conversation with your developer: the agent works autonomously in the background (auto-approve always on) and texts you updates, questions and summaries. Load this skill when the user is in chat mode so the agent behaves like a developer you own.",
+  "contributes": {
+    "providers": [],
+    "slots": [
+      "chat-view",
+      "settings-page"
+    ],
+    "commands": [],
+    "skills": []
+  }
+}
