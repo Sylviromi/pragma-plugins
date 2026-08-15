@@ -7,15 +7,18 @@
 //   2. runs `npm publish` in the plugin folder
 //
 // Usage:
-//   node scripts/publish.mjs                 # publish all plugins
-//   node scripts/publish.mjs convo           # publish one plugin
-//   node scripts/publish.mjs --dry-run       # sync versions, don't publish
+//   node scripts/publish.mjs                   # publish all plugins
+//   node scripts/publish.mjs convo             # publish one plugin
+//   node scripts/publish.mjs --dry-run         # sync versions, don't publish
+//   node scripts/publish.mjs --otp 123456      # pass the npm 2FA one-time code
 
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { execSync } from 'node:child_process'
 
 const dryRun = process.argv.includes('--dry-run')
+const otpIdx = process.argv.indexOf('--otp')
+const otp = otpIdx !== -1 ? process.argv[otpIdx + 1] : null
 const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))
 
 const published = []
@@ -39,7 +42,7 @@ for (const id of readdirSync('.')) {
   writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n')
   console.log(`\n→ ${pkg.name}@${pkg.version}${dryRun ? ' (dry-run)' : ''}`)
   if (!dryRun) {
-    execSync('npm publish', { cwd: dir, stdio: 'inherit' })
+    execSync(`npm publish${otp ? ` --otp ${otp}` : ''}`, { cwd: dir, stdio: 'inherit' })
   }
   published.push(`${pkg.name}@${pkg.version}`)
 }
